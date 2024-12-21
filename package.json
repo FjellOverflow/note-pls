@@ -1,0 +1,27 @@
+{
+	"name": "note-pls",
+	"type": "module",
+	"version": "0.0.1",
+	"description": "Telegram bot that takes notes",
+	"author": "FjellOverflow",
+	"license": "GPL-3.0-only",
+	"homepage": "https://github.com/FjellOverflow/note-pls",
+	"module": "index.ts",
+	"scripts": {
+		"dev": "bun --watch index.ts",
+		"build:linux": "./build.sh linux-x64-baseline",
+		"build:docker": "./build.sh docker"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"dependencies": {
+		"commander": "^12.1.0",
+		"grammy": "^1.33.0"
+	},
+	"trustedDependencies": ["@biomejs/biome"]
+}

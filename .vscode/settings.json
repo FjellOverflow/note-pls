@@ -1,0 +1,18 @@
+{
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.patterns": {
+		"tsconfig.json": "biome.json",
+		"package.json": "bun.lockb, tsconfig.json, biome.json, .gitignore",
+		"Dockerfile": "docker-compose.yaml, build.sh",
+		".env": "example.env"
+	},
+	"editor.codeActionsOnSave": {
+		"quickfix.biome": "explicit",
+		"source.organizeImports.biome": "explicit"
+	},
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "biomejs.biome",
+	"[jsonc]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	}
+}
