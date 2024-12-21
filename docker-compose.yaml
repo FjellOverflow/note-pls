@@ -10,7 +10,9 @@ services:
     env_file:
       - .env
     environment:
+      NP_DEBUG: true
       NP_FILEPATH: /inbox
-      NP_PREPEND: >
-        
-        - 
+      NP_PREPEND: "\
+
+        - " # adds <newline><dash><whitespace> before message
+      restart: unless-stoped
