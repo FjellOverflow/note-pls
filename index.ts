@@ -1,4 +1,3 @@
-import { appendFile } from 'node:fs/promises'
 import { Command, Option } from 'commander'
 import { Bot } from 'grammy'
 import { description, name, version } from './package.json'
@@ -21,7 +20,7 @@ const program = new Command()
 	.addOption(
 		new Option('-f, --file <FILEPATH>', 'filepath to write to')
 			.env(`${ENV_PREFIX}FILEPATH`)
-			.default(`./${name}.txt`)
+			.default('./inbox.txt')
 	)
 	.addOption(
 		new Option('-p, --prepend <STRING>', 'prepend messages with string')
@@ -81,7 +80,10 @@ bot.on('message', async (context) => {
 
 	if (!textMessage) return
 
-	await appendFile(filePath, `${prependStr}${textMessage}`)
+	const file = Bun.file(filePath)
+	const currentContent = (await file.exists()) ? await file.text() : ''
+
+	await Bun.write(file, `${currentContent}${prependStr}${textMessage}`)
 
 	context.deleteMessage()
 })
