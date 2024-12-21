@@ -8,4 +8,4 @@ services:
     env_file:
       - .env
     environment:
-      - NP_FILEPATH=/notes/note-pls-docker.txt
+      - NP_FILEPATH=/notes/note-pls.txt
