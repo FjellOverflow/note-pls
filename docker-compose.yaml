@@ -1,0 +1,11 @@
+---
+services:
+  note-pls:
+    image: ghcr.io/fjelloverflow/note-pls:latest
+    container_name: note-pls
+    volumes:
+      - /home/user/Notes:/notes
+    env_file:
+      - .env
+    environment:
+      - NP_FILEPATH=/notes/note-pls-docker.txt
