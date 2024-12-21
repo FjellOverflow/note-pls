@@ -20,7 +20,7 @@ jobs:
           password: ${{secrets.GITHUB_TOKEN}}
 
       - name: Build docker image
-        run: build.sh docker
+        run: bash build.sh docker
 
       - name: Push all tags
         run: docker image push --all-tags ghcr.io/fjelloverflow/note-pls
