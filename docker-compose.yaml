@@ -1,11 +1,16 @@
 ---
+
 services:
+
   note-pls:
     image: ghcr.io/fjelloverflow/note-pls:latest
     container_name: note-pls
     volumes:
-      - /home/user/Notes:/notes
+      - /home/user/Notes/inbox.txt:/inbox # file has to exist already, otherwise docker creates a dir with that name
     env_file:
       - .env
     environment:
-      - NP_FILEPATH=/notes/note-pls.txt
+      NP_FILEPATH: /inbox
+      NP_PREPEND: >
+        
+        - 
