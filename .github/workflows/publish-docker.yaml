@@ -1,9 +1,10 @@
 ---
-name: CI/CD
+name: Publish docker image
 
 on:
   push:
     branches: main
+  workflow_dispatch:
 
 jobs:
   build:
