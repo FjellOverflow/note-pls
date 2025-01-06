@@ -36,9 +36,9 @@ if [ "$TARGET" = "docker" ]; then
 
     sudo docker build \
       -t "$IMAGENAME":latest -t "$IMAGENAME":"$VERSION" \
-      --label org.opencontainers.image.source="$HOMEPAGE" \
-      --label org.opencontainers.image.description="$DESCRIPTION" \
-      --label org.opencontainers.image.licenses="$LICENSE" .
+      --label "org.opencontainers.image.source=$HOMEPAGE" \
+      --label "org.opencontainers.image.description=$DESCRIPTION" \
+      --label "org.opencontainers.image.licenses=$LICENSE" .
 else
     bun build $ENTRYPOINT --target=bun-$TARGET --compile --outfile $NAME.v$VERSION.$TARGET
 fi
