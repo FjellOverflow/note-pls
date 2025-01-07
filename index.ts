@@ -1,5 +1,5 @@
 import { Command, Option } from 'commander'
-import { Bot } from 'grammy'
+import { Bot, type GrammyError } from 'grammy'
 import { description, name, version } from './package.json'
 
 const ENV_PREFIX = 'NP_'
@@ -88,4 +88,12 @@ bot.on('message', async (context) => {
 	context.deleteMessage()
 })
 
-bot.start()
+bot.start().catch((e: GrammyError) => {
+	if (e.error_code === 409) {
+		console.error(
+			'Another instance of the bot is already running. Terminating.'
+		)
+		process.exit(1)
+	}
+	throw e
+})
