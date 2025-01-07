@@ -1,7 +1,7 @@
 {
 	"name": "note-pls",
 	"type": "module",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "Telegram bot that takes notes",
 	"author": "FjellOverflow",
 	"license": "GPL-3.0-only",
@@ -28,5 +28,7 @@
 		"commander": "^12.1.0",
 		"grammy": "^1.33.0"
 	},
-	"trustedDependencies": ["@biomejs/biome"]
+	"trustedDependencies": [
+		"@biomejs/biome"
+	]
 }
