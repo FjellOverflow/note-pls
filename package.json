@@ -11,7 +11,9 @@
 		"dev": "bun --watch index.ts",
 		"lint": "bunx biome check .",
 		"release": "bun lint && commit-and-tag-version --sign",
-		"build:linux": "./build.sh linux-x64-baseline",
+		"build:linux": "./build.sh linux-x64",
+		"build:linux-baseline": "./build.sh linux-x64-baseline",
+		"build:windows": "./build.sh windows-x64",
 		"build:docker": "./build.sh docker"
 	},
 	"devDependencies": {
