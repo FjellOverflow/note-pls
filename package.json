@@ -28,7 +28,5 @@
 		"commander": "^12.1.0",
 		"grammy": "^1.33.0"
 	},
-	"trustedDependencies": [
-		"@biomejs/biome"
-	]
+	"trustedDependencies": ["@biomejs/biome"]
 }
