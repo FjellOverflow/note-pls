@@ -4,7 +4,8 @@
 		"tsconfig.json": "biome.json",
 		"package.json": "bun.lockb, tsconfig.json, biome.json, .gitignore",
 		"Dockerfile": "docker-compose.yaml, build.sh",
-		".env": "example.env"
+		".env": "example.env",
+		"README.md": "LICENSE.md"
 	},
 	"editor.codeActionsOnSave": {
 		"quickfix.biome": "explicit",
