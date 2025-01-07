@@ -38,7 +38,10 @@ if [ "$TARGET" = "docker" ]; then
       -t "$IMAGENAME":latest -t "$IMAGENAME":"$VERSION" \
       --label "org.opencontainers.image.source=$HOMEPAGE" \
       --label "org.opencontainers.image.description=$DESCRIPTION" \
-      --label "org.opencontainers.image.licenses=$LICENSE" .
+      --label "org.opencontainers.image.title=$NAME" \
+      --label "org.opencontainers.image.licenses=$LICENSE" \
+      --label "org.opencontainers.image.url=$HOMEPAGE" \
+      --label "org.opencontainers.image.version=v$VERSION" .
 else
     bun build $ENTRYPOINT --target=bun-$TARGET --compile --outfile $NAME.v$VERSION.$TARGET
 fi
