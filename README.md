@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://github.com/FjellOverflow/note-pls">
+    <img alt="logo" src="./logo.svg" height="128">
+  </a>
+</p>
+
 <h1 align="center">
   <a href="https://github.com/FjellOverflow/note-pls">note-pls</a>
 </h1>
