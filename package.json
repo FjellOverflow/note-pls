@@ -10,12 +10,14 @@
 	"scripts": {
 		"dev": "bun --watch index.ts",
 		"lint": "bunx biome check .",
+		"release": "bun lint && commit-and-tag-version --sign",
 		"build:linux": "./build.sh linux-x64-baseline",
 		"build:docker": "./build.sh docker"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@types/bun": "latest"
+		"@types/bun": "latest",
+		"commit-and-tag-version": "^12.5.0"
 	},
 	"peerDependencies": {
 		"typescript": "^5.0.0"
