@@ -9,6 +9,7 @@
 	"module": "index.ts",
 	"scripts": {
 		"dev": "bun --watch index.ts",
+		"lint": "bunx biome check .",
 		"build:linux": "./build.sh linux-x64-baseline",
 		"build:docker": "./build.sh docker"
 	},
