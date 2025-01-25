@@ -89,6 +89,10 @@ bot.on('message', async (context) => {
 })
 
 bot.start().catch((e: GrammyError) => {
+	if (e.error_code === 404) {
+		console.error('Provided bot token is wrong. Terminating.')
+		process.exit(1)
+	}
 	if (e.error_code === 409) {
 		console.error(
 			'Another instance of the bot is already running. Terminating.'
