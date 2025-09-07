@@ -48,7 +48,7 @@ Mandatory options are
 - `-c, --chat, NP_TELEGRAM_CHAT_ID`
 
 
-Use the `-h, --help` flag for help and to see all available configuration options or take a look at the provided [example.env]([example.env](./example.env)) file.
+Use the `-h, --help` flag for help and to see all available configuration options or take a look at the provided [example.env](./example.env) file.
 
 ### Token and chat ID
 
