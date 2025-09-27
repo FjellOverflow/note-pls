@@ -19,14 +19,14 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"@types/bun": "latest",
-		"commit-and-tag-version": "^12.5.2"
+		"commit-and-tag-version": "^12.6.0"
 	},
 	"peerDependencies": {
 		"typescript": "^5.7.2"
 	},
 	"dependencies": {
-		"commander": "^14.0.0",
-		"grammy": "^1.38.1"
+		"commander": "^14.0.1",
+		"grammy": "^1.38.2"
 	},
 	"trustedDependencies": ["@biomejs/biome"]
 }
