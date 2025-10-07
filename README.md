@@ -20,6 +20,10 @@
   <img src="https://img.shields.io/github/actions/workflow/status/FjellOverflow/note-pls/publish-docker.yaml?branch=main&label=Build"/>
 </p>
 
+> [!WARNING]
+> This project is no longer updated or maintained. Read the [Deprecation notice](./DEPRECATION_NOTICE.md) for more information.
+
+
 <p align="center">
   <a href="#what-is-this">What is this?</a> |
   <a href="#usage">Usage</a> |

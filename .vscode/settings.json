@@ -5,7 +5,7 @@
 		"package.json": "bun.lockb, tsconfig.json, biome.json, .gitignore",
 		"Dockerfile": "docker-compose.yaml, build.sh",
 		".env": "example.env",
-		"README.md": "LICENSE.md, CHANGELOG.md"
+		"README.md": "LICENSE.md, CHANGELOG.md, DEPRECATION_NOTICE.md"
 	},
 	"editor.codeActionsOnSave": {
 		"quickfix.biome": "explicit",
